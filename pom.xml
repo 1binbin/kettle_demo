@@ -5,17 +5,17 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.3.0.RELEASE</version>
+		<version>2.3.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.kettle</groupId>
 	<artifactId>demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>demo</name>
-	<description>Demo project for Spring Boot</description>
 
 	<properties>
 		<java.version>1.8</java.version>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
 	</properties>
 
 	<dependencies>
@@ -79,6 +79,11 @@
 			mvn install:install-file -Dfile=src/main/resources/lib/metastore-8.2.0.0-342.jar  -DgroupId=pentaho-kettle -DartifactId=metastore -Dversion=8.2.0.0-342 -Dpackaging=jar
 			mvn install:install-file -Dfile=src/main/resources/lib/javascript-1.7.2.jar  -DgroupId=org.mozilla -DartifactId=javascript -Dversion=1.7.2 -Dpackaging=jar 
 		-->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.13</version>
+		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-vfs2</artifactId>
